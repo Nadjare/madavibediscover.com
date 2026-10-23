@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mada Vibe Discover — Agence de voyage Madagascar</title>
+<title>Mada Vibe Discover | Excursions à Nosy Be et dans le Nord de Madagascar</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -1637,6 +1637,8 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;}
    ============================================================ */
 const traductions = {
   fr: {
+   
+meta_title: "Mada Vibe Discover | Excursions à Nosy Be et dans le Nord de Madagascar",
     nav_accueil: "Accueil",
     nav_destinations: "Destinations",
     nav_excursions: "Excursions",
@@ -1697,6 +1699,7 @@ const traductions = {
     pied_slogan: "Madagascar, une île, mille émotions."
   },
   en: {
+     meta_title: "Mada Vibe Discover | Tours in Nosy Be and Northern Madagascar",
     nav_accueil: "Home",
     nav_destinations: "Destinations",
     nav_excursions: "Tours",
@@ -1757,6 +1760,7 @@ const traductions = {
     pied_slogan: "Madagascar, one island, a thousand emotions."
   },
   de: {
+     meta_title: "Mada Vibe Discover | Ausflüge auf Nosy Be und in Nordmadagaskar",
     nav_accueil: "Startseite",
     nav_destinations: "Reiseziele",
     nav_excursions: "Ausflüge",
@@ -1817,6 +1821,7 @@ const traductions = {
     pied_slogan: "Madagaskar, eine Insel, tausend Emotionen."
   },
   it: {
+     meta_title: "Mada Vibe Discover | Escursioni a Nosy Be e nel nord del Madagascar",
     nav_accueil: "Home",
     nav_destinations: "Destinazioni",
     nav_excursions: "Escursioni",
@@ -1884,7 +1889,7 @@ function appliquerLangue(code){
   langueActive = code;
   document.getElementById('langueActuelle').textContent = code.toUpperCase();
 
-  document.querySelectorAll('[data-i18n]').forEach(el => {
+    document.querySelectorAll('[data-i18n]').forEach(el => {
     const cle = el.getAttribute('data-i18n');
     if (traductions[code] && traductions[code][cle]) {
       if (traductions[code][cle].includes('<br>')) {
@@ -1895,10 +1900,15 @@ function appliquerLangue(code){
     }
   });
 
+  // Mettre à jour le titre et la langue de la page
+  if (traductions[code] && traductions[code].meta_title) {
+    document.title = traductions[code].meta_title;
+  }
+  document.documentElement.lang = code;
+
   document.querySelectorAll('#menuLangueFlottant li').forEach(li => {
     li.classList.toggle('actif', li.getAttribute('data-lang') === code);
   });
-
   document.getElementById('menuLangueFlottant').classList.remove('ouvert');
 }
 
