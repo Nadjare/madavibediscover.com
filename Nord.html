@@ -1643,6 +1643,7 @@ menuMobile.querySelectorAll('a').forEach(a => {
    ============================================================ */
 const traductions = {
   fr: {
+     meta_title: "Tour du Nord de Madagascar | Mada Vibe Discover — Excursions & Séjours",
     nom_agence: "Mada Vibe Discover",
     slogan: "Explorer, Vivre et Partager",
     nav_accueil: "Accueil",
@@ -1723,6 +1724,7 @@ const traductions = {
    message_whatsapp_site: "Bonjour Mada Vibe Discover, je souhaite obtenir des informations et un devis pour",
   },
   en: {
+     meta_title: "Northern Madagascar Tours | Mada Vibe Discover — Excursions & Stays",
     nom_agence: "Mada Vibe Discover",
     slogan: "Explore, Live and Share",
     nav_accueil: "Home",
@@ -1803,6 +1805,7 @@ const traductions = {
    message_whatsapp_site: "Hello Mada Vibe Discover, I would like to get information and a quote for",
   },
   de: {
+     meta_title: "Touren durch Nordmadagaskar | Mada Vibe Discover — Ausflüge & Reisen",
     nom_agence: "Mada Vibe Discover",
     slogan: "Entdecken, Erleben und Teilen",
     nav_accueil: "Startseite",
@@ -1883,6 +1886,7 @@ const traductions = {
     message_whatsapp_site: "Hallo Mada Vibe Discover, ich möchte Informationen und ein Angebot erhalten für",
   },
   it: {
+     meta_title: "Tour nel nord del Madagascar | Mada Vibe Discover — Escursioni e soggiorni",
     nom_agence: "Mada Vibe Discover",
     slogan: "Esplorare, Vivere e Condividere",
     nav_accueil: "Home",
@@ -1981,6 +1985,13 @@ function appliquerLangue(code){
       }
     }
   });
+     // Mettre à jour le titre selon la langue choisie
+  if (traductions[code] && traductions[code].meta_title) {
+    document.title = traductions[code].meta_title;
+  }
+
+  // Définir la langue de la page
+  document.documentElement.lang = code;
 
   /* 2. Étiquettes des cartes de la roue */
   document.querySelectorAll('.roue-carte').forEach(carte => {
