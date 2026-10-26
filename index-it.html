@@ -1,0 +1,2097 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mada Vibe Discover | Escursioni a Nosy Be e nel Nord del Madagascar</title>
+<meta name="description" content="Scoprite Nosy Be e il nord del Madagascar con Mada Vibe Discover: Nosy Iranja, Nosy Komba, il Mare di Smeraldo, il Parco della Montagna d’Ambra e gli Tsingy Rossi.">
+<link rel="alternate" hreflang="fr" href="https://nadjare.github.io/madavibediscover.com/" />
+<link rel="alternate" hreflang="en" href="https://nadjare.github.io/madavibediscover.com/index-en.html" />
+<link rel="alternate" hreflang="de" href="https://nadjare.github.io/madavibediscover.com/index-de.html" />
+<link rel="alternate" hreflang="it" href="https://nadjare.github.io/madavibediscover.com/index-it.html" />
+<link rel="alternate" hreflang="x-default" href="https://nadjare.github.io/madavibediscover.com/" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<style>
+
+/* ============================================================
+   VARIABLES GLOBALES
+   ============================================================ */
+:root{
+  --vert-profond:#004C3D;
+  --jaune-dore:#EFC65B;
+  --vert-tres-pale:#EAF4F0;
+  --blanc:#FFFFFF;
+  --bleu-ciel:#D6EBF5;
+  --marge-ord:42px;
+  --marge-tab:20px;
+  --marge-tel:8px;
+  --ecart-dest-ord:16px;
+  --ecart-dest-tab:10px;
+  --ecart-dest-tel:4px;
+  --ecart-exc-ord:14px;
+  --ecart-exc-tab:8px;
+  --ecart-exc-tel:3px;
+}
+
+*{margin:0;padding:0;box-sizing:border-box;}
+
+html,body{
+  overflow-x:hidden;
+  width:100%;
+  background:var(--blanc);
+  font-family:'Poppins',sans-serif;
+  color:var(--vert-profond);
+  line-height:1.4;
+}
+
+img{max-width:100%;display:block;}
+a{text-decoration:none;color:inherit;}
+button{font-family:inherit;cursor:pointer;border:none;background:none;}
+
+.container{
+  width:100%;
+  max-width:1440px;
+  margin:0 auto;
+  padding-left:var(--marge-ord);
+  padding-right:var(--marge-ord);
+}
+
+/* ============================================================
+   EN-TÊTE — logo rond + nom + slogan HTML + nav + WhatsApp
+   ============================================================ */
+.entete{
+  background:var(--bleu-ciel);
+  position:relative;
+  z-index:100;
+}
+.entete .container{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:16px;
+  height:90px;
+}
+
+.bloc-identite{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  flex-shrink:0;
+}
+.logo-rond{
+  width:52px;
+  height:52px;
+  border-radius:50%;
+  overflow:hidden;
+  background:var(--vert-profond);
+  flex-shrink:0;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.logo-rond img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+.bloc-identite .texte-identite{
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
+.bloc-identite .nom-agence{
+  font-family:'Poppins',sans-serif;
+  font-weight:700;
+  font-size:14px;
+  color:var(--vert-profond);
+  letter-spacing:.5px;
+  line-height:1.1;
+  text-transform:uppercase;
+}
+.bloc-identite .slogan{
+  font-family:'Poppins',sans-serif;
+  font-weight:400;
+  font-size:8.5px;
+  color:var(--vert-profond);
+  letter-spacing:1.2px;
+  line-height:1.2;
+  margin-top:2px;
+  opacity:.85;
+}
+
+.nav-desktop{
+  display:flex;
+  align-items:center;
+  gap:18px;
+  flex:1;
+  justify-content:center;
+}
+.nav-desktop a{
+  font-size:12px;
+  font-weight:500;
+  color:var(--vert-profond);
+  position:relative;
+  padding-bottom:3px;
+  white-space:nowrap;
+}
+.nav-desktop a.actif{
+  font-weight:600;
+}
+.nav-desktop a.actif::after{
+  content:'';
+  position:absolute;
+  left:0;
+  bottom:-2px;
+  width:100%;
+  height:2px;
+  background:var(--vert-profond);
+  border-radius:2px;
+}
+
+.btn-whatsapp{
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+  background:var(--vert-profond);
+  color:var(--blanc);
+  font-size:12px;
+  font-weight:600;
+  padding:8px 16px;
+  border-radius:50px;
+  white-space:nowrap;
+  flex-shrink:0;
+}
+.btn-whatsapp i{font-size:13px;}
+
+.burger{
+  display:none;
+  font-size:22px;
+  color:var(--vert-profond);
+  padding:4px 6px;
+}
+
+/* Menu mobile */
+.menu-mobile{
+  display:none;
+  position:absolute;
+  top:100%;
+  left:0;
+  width:100%;
+  background:var(--blanc);
+  border-bottom:2px solid var(--vert-tres-pale);
+  box-shadow:0 10px 20px rgba(0,0,0,.08);
+  z-index:200;
+}
+.menu-mobile.ouvert{display:block;}
+.menu-mobile ul{
+  list-style:none;
+  padding:8px var(--marge-tel);
+}
+.menu-mobile ul li a{
+  display:block;
+  padding:13px 10px;
+  font-size:13px;
+  color:var(--vert-profond);
+  border-bottom:1px solid #eef6f2;
+}
+.menu-mobile ul li:last-child a{border-bottom:none;}
+
+/* ============================================================
+   BANNIÈRE
+   ============================================================ */
+.banniere{
+  position:relative;
+  height:340px;
+  background-image:url('https://images.pexels.com/photos/1591373/pexels-photo-1591373.jpeg?auto=compress&cs=tinysrgb&w=1600');
+  background-size:cover;
+  background-position:right center;
+  display:flex;
+  align-items:center;
+}
+.banniere::before{
+  content:'';
+  position:absolute;
+  inset:0;
+  background:linear-gradient(90deg,rgba(0,30,20,.55) 0%,rgba(0,30,20,.2) 45%,rgba(0,0,0,0) 70%);
+}
+.banniere-contenu{
+  position:relative;
+  z-index:2;
+  max-width:560px;
+  color:var(--blanc);
+}
+.banniere-contenu h1{
+  font-family:'Dancing Script',cursive;
+  font-weight:700;
+  font-size:48px;
+  line-height:1.05;
+  margin-bottom:14px;
+  text-shadow:0 2px 10px rgba(0,0,0,.35);
+}
+.banniere-contenu p{
+  font-size:14px;
+  font-weight:400;
+  line-height:1.5;
+  margin-bottom:22px;
+  max-width:480px;
+  text-shadow:0 2px 8px rgba(0,0,0,.4);
+}
+.banniere-boutons{
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+}
+.btn-jaune{
+  display:inline-flex;
+  align-items:center;
+  gap:7px;
+  background:var(--jaune-dore);
+  color:var(--blanc);
+  font-size:12px;
+  font-weight:600;
+  padding:10px 20px;
+  border-radius:50px;
+}
+.btn-transparent{
+  display:inline-flex;
+  align-items:center;
+  gap:7px;
+  background:transparent;
+  color:var(--blanc);
+  border:2px solid var(--blanc);
+  font-size:12px;
+  font-weight:600;
+  padding:8px 18px;
+  border-radius:50px;
+}
+
+/* ============================================================
+   AVANTAGES — 4 blocs sur une ligne
+   ============================================================ */
+.avantages{
+  background:#F6FBF9;
+  border-bottom:1px solid #e2efe9;
+}
+.avantages .container{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  padding-top:0;
+  padding-bottom:0;
+}
+.avantage{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  height:110px;
+  padding:8px 10px;
+  border-right:1px solid #cfe3db;
+}
+.avantage:last-child{border-right:none;}
+.avantage i{
+  font-size:28px;
+  color:var(--vert-profond);
+  margin-bottom:6px;
+}
+.avantage h4{
+  font-size:12px;
+  font-weight:700;
+  color:var(--vert-profond);
+  text-transform:uppercase;
+  letter-spacing:.3px;
+  margin-bottom:3px;
+}
+.avantage p{
+  font-size:10px;
+  font-weight:400;
+  color:#3a5c50;
+  line-height:1.3;
+  max-width:150px;
+}
+
+/* ============================================================
+   DESTINATIONS — 2 cartes côte à côte
+   ============================================================ */
+.destinations{
+  padding:32px 0 40px;
+  background:var(--blanc);
+}
+.titre-section{
+  text-align:center;
+  margin-bottom:26px;
+}
+.trait-dore{
+  width:56px;
+  height:3px;
+  background:var(--jaune-dore);
+  border-radius:4px;
+  margin:0 auto 10px;
+}
+.titre-section h2{
+  font-size:24px;
+  font-weight:700;
+  color:var(--vert-profond);
+  margin-bottom:6px;
+}
+.titre-section p{
+  font-size:12px;
+  font-weight:400;
+  color:#4a6b60;
+  max-width:560px;
+  margin:0 auto;
+}
+.grille-destinations{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:var(--ecart-dest-ord);
+}
+.carte-destination{
+  display:flex;
+  border-radius:8px;
+  overflow:hidden;
+  box-shadow:0 6px 18px rgba(0,0,0,.08);
+  border:1px solid #e2ede8;
+  background:var(--blanc);
+  height:218px;
+  min-width:0;
+  cursor:pointer;
+  transition:transform .25s, box-shadow .25s;
+  text-decoration:none;
+  color:inherit;
+}
+.carte-destination:hover{
+  transform:translateY(-4px);
+  box-shadow:0 12px 28px rgba(0,0,0,.15);
+}
+.carte-destination:active{
+  transform:translateY(-2px);
+}
+.carte-destination .photo{
+  flex:0 0 60%;
+  background-size:cover;
+  background-position:center;
+  position:relative;
+}
+.carte-destination .photo .nom-photo{
+  position:absolute;
+  bottom:10px;
+  left:12px;
+  color:var(--blanc);
+  font-size:20px;
+  font-weight:700;
+  text-shadow:0 2px 8px rgba(0,0,0,.6);
+  line-height:1.1;
+}
+.carte-destination .photo .sous-photo{
+  position:absolute;
+  bottom:-14px;
+  left:0;
+  right:0;
+  color:var(--blanc);
+  font-size:11px;
+  font-weight:400;
+  text-shadow:0 2px 8px rgba(0,0,0,.6);
+  opacity:0;
+  pointer-events:none;
+}
+.carte-destination .panneau{
+  flex:0 0 40%;
+  padding:12px 12px 12px 14px;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+  min-width:0;
+}
+.carte-destination .panneau .desc{
+  font-size:11px;
+  font-weight:400;
+  color:#2e5246;
+  line-height:1.4;
+  margin-bottom:6px;
+}
+.carte-destination .panneau ul{
+  list-style:none;
+  margin-bottom:6px;
+}
+.carte-destination .panneau ul li{
+  display:flex;
+  align-items:flex-start;
+  gap:5px;
+  font-size:9px;
+  font-weight:400;
+  color:#375f52;
+  line-height:1.35;
+  margin-bottom:3px;
+}
+.carte-destination .panneau ul li i{
+  color:var(--vert-profond);
+  font-size:9px;
+  margin-top:2px;
+}
+.btn-destination{
+  display:inline-flex;
+  align-items:center;
+  gap:5px;
+  background:var(--vert-profond);
+  color:var(--blanc);
+  font-size:9px;
+  font-weight:600;
+  padding:6px 12px;
+  border-radius:30px;
+  align-self:flex-start;
+}
+.btn-destination i{font-size:8px;}
+
+/* ============================================================
+   EXCURSIONS — 5 cartes sur une ligne
+   ============================================================ */
+.excursions{
+  padding:10px 0 40px;
+  background:var(--blanc);
+}
+.grille-excursions{
+  display:grid;
+  grid-template-columns:repeat(5,1fr);
+  gap:var(--ecart-exc-ord);
+}
+.carte-excursion{
+  background:var(--blanc);
+  border:1px solid #e2ede8;
+  border-radius:8px;
+  overflow:hidden;
+  box-shadow:0 4px 12px rgba(0,0,0,.05);
+  cursor:pointer;
+  position:relative;
+  min-width:0;
+  transition:transform .2s;
+}
+.carte-excursion:hover{transform:translateY(-3px);}
+.carte-excursion .img{
+  height:105px;
+  background-size:cover;
+  background-position:center;
+}
+.carte-excursion .contenu{
+  padding:8px 8px 10px;
+}
+.carte-excursion .contenu h4{
+  font-size:12px;
+  font-weight:600;
+  color:var(--vert-profond);
+  margin-bottom:3px;
+  line-height:1.2;
+}
+.carte-excursion .contenu p{
+  font-size:10px;
+  font-weight:400;
+  color:#4f6e63;
+  line-height:1.35;
+  margin-bottom:6px;
+  min-height:26px;
+}
+.carte-excursion .contenu .fleche{
+  display:block;
+  text-align:right;
+  color:var(--vert-profond);
+  font-size:12px;
+}
+
+/* Carte agrandie */
+.carte-excursion.agrandie{
+  position:fixed;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%) scale(1);
+  width:min(340px,88vw);
+  z-index:1000;
+  box-shadow:0 20px 50px rgba(0,0,0,.35);
+  border-radius:12px;
+  background:var(--blanc);
+}
+.carte-excursion.agrandie .img{height:190px;}
+.carte-excursion.agrandie .contenu{padding:14px;}
+.carte-excursion.agrandie .contenu h4{font-size:16px;}
+.carte-excursion.agrandie .contenu p{font-size:12px;min-height:auto;margin-bottom:10px;}
+.carte-excursion.agrandie .btn-excursion{
+  display:inline-flex;
+  align-items:center;
+  gap:5px;
+  background:var(--vert-profond);
+  color:var(--blanc);
+  font-size:11px;
+  font-weight:600;
+  padding:8px 16px;
+  border-radius:30px;
+  margin-top:8px;
+}
+.carte-excursion .btn-excursion{display:none;}
+.overlay-excursion{
+  display:none;
+  position:fixed;
+  inset:0;
+  background:rgba(0,20,15,.55);
+  z-index:999;
+}
+.overlay-excursion.ouvert{display:block;}
+
+/* Bouton fermeture carte agrandie */
+.btn-fermer-carte{
+  position:absolute;
+  top:8px;
+  right:8px;
+  width:28px;
+  height:28px;
+  border-radius:50%;
+  background:rgba(255,255,255,.9);
+  color:var(--vert-profond);
+  font-size:14px;
+  display:none;
+  align-items:center;
+  justify-content:center;
+  z-index:10;
+  box-shadow:0 2px 8px rgba(0,0,0,.2);
+}
+.carte-excursion.agrandie .btn-fermer-carte{display:flex;}
+
+/* ============================================================
+   AGENCE — 3 colonnes sur une ligne
+   ============================================================ */
+.agence{
+  padding:10px 0 40px;
+  background:var(--blanc);
+}
+.agence .container{
+  display:grid;
+  grid-template-columns:27% 40% 33%;
+  gap:24px;
+  align-items:stretch;
+}
+.agence-photo{
+  border-radius:10px;
+  overflow:hidden;
+  box-shadow:0 6px 18px rgba(0,0,0,.1);
+}
+.agence-photo img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+  min-height:185px;
+}
+.agence-texte{
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-start;
+}
+.agence-texte h3{
+  font-size:23px;
+  font-weight:700;
+  color:var(--vert-profond);
+  margin-bottom:4px;
+}
+.agence-texte .accroche{
+  font-size:13px;
+  font-weight:600;
+  color:#1d4a3c;
+  margin-bottom:10px;
+}
+.agence-texte p{
+  font-size:12px;
+  font-weight:400;
+  color:#2e5246;
+  line-height:1.55;
+  margin-bottom:14px;
+}
+.btn-en-savoir{
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+  background:var(--vert-profond);
+  color:var(--blanc);
+  font-size:11px;
+  font-weight:600;
+  padding:8px 18px;
+  border-radius:50px;
+  align-self:flex-start;
+}
+.agence-panneau{
+  background:var(--vert-tres-pale);
+  border-radius:10px;
+  padding:16px 14px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  gap:14px;
+}
+.engagement{
+  display:flex;
+  align-items:flex-start;
+  gap:10px;
+}
+.engagement i{
+  font-size:20px;
+  color:var(--vert-profond);
+  width:26px;
+  text-align:center;
+  flex-shrink:0;
+  margin-top:2px;
+}
+.engagement h5{
+  font-size:12px;
+  font-weight:700;
+  color:var(--vert-profond);
+  margin-bottom:2px;
+}
+.engagement p{
+  font-size:10px;
+  font-weight:400;
+  color:#3f5f54;
+  line-height:1.35;
+}
+
+/* ============================================================
+   BANDE DE CONTACT
+   ============================================================ */
+.bande-contact{
+  position:relative;
+  background-image:url('https://images.pexels.com/photos/1591373/pexels-photo-1591373.jpeg?auto=compress&cs=tinysrgb&w=1600');
+  background-size:cover;
+  background-position:center 40%;
+  padding:20px 0;
+}
+.bande-contact::before{
+  content:'';
+  position:absolute;
+  inset:0;
+  background:rgba(0,25,18,.68);
+}
+.bande-contact .container{
+  position:relative;
+  z-index:2;
+  display:grid;
+  grid-template-columns:auto 1fr auto;
+  align-items:center;
+  gap:20px;
+  color:var(--blanc);
+}
+.contact-avion{
+  font-size:32px;
+  color:var(--blanc);
+}
+.contact-texte h3{
+  font-size:17px;
+  font-weight:700;
+  margin-bottom:3px;
+}
+.contact-texte p{
+  font-size:12px;
+  font-weight:400;
+  opacity:.9;
+}
+.contact-droite{
+  display:flex;
+  align-items:center;
+  gap:16px;
+  flex-wrap:wrap;
+  justify-content:flex-end;
+}
+.btn-whatsapp-contact{
+  display:inline-flex;
+  align-items:center;
+  gap:7px;
+  background:var(--vert-profond);
+  color:var(--blanc);
+  font-size:12px;
+  font-weight:600;
+  padding:9px 18px;
+  border-radius:50px;
+  white-space:nowrap;
+}
+.contact-coord{
+  display:flex;
+  flex-direction:column;
+  gap:3px;
+  font-size:11px;
+  font-weight:400;
+  background:rgba(0,0,0,.22);
+  border-radius:30px;
+  padding:7px 16px;
+  backdrop-filter:blur(4px);
+}
+.contact-coord a{
+  color:var(--blanc);
+  display:flex;
+  align-items:center;
+  gap:6px;
+}
+.contact-coord i{font-size:11px;}
+
+/* ============================================================
+   PIED DE PAGE
+   ============================================================ */
+.pied{
+  background:var(--vert-profond);
+  color:var(--blanc);
+  padding:22px 0 14px;
+}
+.pied .container{
+  display:flex;
+  flex-direction:column;
+  gap:14px;
+}
+.pied-ligne1{
+  display:grid;
+  grid-template-columns:auto 1fr auto;
+  align-items:center;
+  gap:16px;
+  padding-bottom:14px;
+  border-bottom:1px solid rgba(255,255,255,.18);
+}
+.logo-pied-bloc{
+  display:flex;
+  align-items:center;
+  gap:8px;
+}
+.logo-rond-pied{
+  width:36px;
+  height:36px;
+  border-radius:50%;
+  overflow:hidden;
+  background:rgba(255,255,255,.1);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-shrink:0;
+}
+.logo-rond-pied img{width:100%;height:100%;object-fit:cover;}
+.texte-pied-identite{
+  display:flex;
+  flex-direction:column;
+}
+.texte-pied-identite .nom-pied{
+  font-size:11px;
+  font-weight:700;
+  letter-spacing:.5px;
+  text-transform:uppercase;
+  line-height:1.1;
+}
+.texte-pied-identite .slogan-pied{
+  font-size:7px;
+  letter-spacing:1px;
+  opacity:.85;
+  margin-top:1px;
+}
+.nav-pied{
+  display:flex;
+  justify-content:center;
+  gap:14px;
+  flex-wrap:wrap;
+}
+.nav-pied a{
+  color:var(--blanc);
+  font-size:10px;
+  font-weight:400;
+  opacity:.9;
+  position:relative;
+}
+.nav-pied a:not(:last-child)::after{
+  content:'|';
+  margin-left:14px;
+  color:#6b8b7e;
+  font-weight:300;
+}
+.sociaux{
+  display:flex;
+  gap:14px;
+}
+.sociaux a{
+  color:var(--blanc);
+  font-size:16px;
+  opacity:.9;
+}
+.pied-ligne2{
+  display:flex;
+  justify-content:space-between;
+  font-size:10px;
+  font-weight:400;
+  opacity:.85;
+  flex-wrap:wrap;
+  gap:8px;
+}
+
+/* ============================================================
+   BOUTON FLOTTANT LANGUES (bas droite)
+   ============================================================ */
+.langue-flottant{
+  position:fixed;
+  bottom:22px;
+  right:22px;
+  z-index:900;
+}
+.btn-langue-flottant{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  background:var(--vert-profond);
+  color:var(--blanc);
+  padding:11px 18px;
+  border-radius:50px;
+  font-size:13px;
+  font-weight:600;
+  box-shadow:0 6px 20px rgba(0,0,0,.25);
+  transition:transform .2s;
+}
+.btn-langue-flottant:hover{transform:translateY(-2px);}
+.btn-langue-flottant i{font-size:14px;}
+
+.menu-langue-flottant{
+  position:absolute;
+  bottom:100%;
+  right:0;
+  margin-bottom:10px;
+  background:var(--blanc);
+  border-radius:12px;
+  box-shadow:0 10px 30px rgba(0,0,0,.2);
+  padding:6px 0;
+  min-width:160px;
+  display:none;
+  list-style:none;
+  border:1px solid #e0eee9;
+  overflow:hidden;
+}
+.menu-langue-flottant.ouvert{display:block;}
+.menu-langue-flottant li{
+  padding:10px 16px;
+  font-size:13px;
+  display:flex;
+  align-items:center;
+  gap:10px;
+  cursor:pointer;
+  color:var(--vert-profond);
+  transition:background .15s;
+}
+.menu-langue-flottant li:hover{background:var(--vert-tres-pale);}
+.menu-langue-flottant li.actif{background:var(--vert-tres-pale);font-weight:600;}
+.menu-langue-flottant img{
+  width:20px;height:14px;object-fit:cover;border-radius:2px;
+}
+
+/* ============================================================
+   RESPONSIVE — TABLETTE
+   ============================================================ */
+@media(max-width:1024px){
+  .container{
+    padding-left:var(--marge-tab);
+    padding-right:var(--marge-tab);
+  }
+  .entete .container{height:75px;gap:10px;}
+  .logo-rond{width:42px;height:42px;}
+  .bloc-identite .nom-agence{font-size:11px;}
+  .bloc-identite .slogan{font-size:7px;letter-spacing:1px;}
+  .nav-desktop{gap:10px;}
+  .nav-desktop a{font-size:10px;}
+  .btn-whatsapp{font-size:10px;padding:6px 12px;}
+  .btn-whatsapp i{font-size:11px;}
+
+  .banniere{height:300px;}
+  .banniere-contenu h1{font-size:40px;}
+  .banniere-contenu p{font-size:12px;}
+
+  .avantage{height:85px;padding:6px;}
+  .avantage i{font-size:23px;margin-bottom:4px;}
+  .avantage h4{font-size:10px;}
+  .avantage p{font-size:8px;}
+
+  .titre-section h2{font-size:21px;}
+  .titre-section p{font-size:11px;}
+
+  .grille-destinations{gap:var(--ecart-dest-tab);}
+  .carte-destination{height:190px;border-radius:7px;}
+  .carte-destination .photo{flex:0 0 55%;}
+  .carte-destination .photo .nom-photo{font-size:15px;bottom:8px;left:10px;}
+  .carte-destination .panneau{flex:0 0 45%;padding:10px;}
+  .carte-destination .panneau .desc{font-size:9px;}
+  .carte-destination .panneau ul li{font-size:8px;}
+  .btn-destination{font-size:8px;padding:5px 10px;}
+
+  .grille-excursions{gap:var(--ecart-exc-tab);}
+  .carte-excursion .img{height:75px;}
+  .carte-excursion .contenu h4{font-size:10px;}
+  .carte-excursion .contenu p{font-size:8px;min-height:22px;}
+
+  .agence .container{grid-template-columns:27% 40% 33%;gap:10px;}
+  .agence-texte h3{font-size:17px;}
+  .agence-texte .accroche{font-size:11px;}
+  .agence-texte p{font-size:10px;}
+  .engagement h5{font-size:10px;}
+  .engagement p{font-size:8px;}
+  .agence-panneau{padding:12px 10px;gap:10px;}
+  .agence-photo img{min-height:160px;}
+
+  .bande-contact .container{gap:12px;}
+  .contact-texte h3{font-size:14px;}
+  .contact-texte p{font-size:10px;}
+  .contact-coord{font-size:9px;padding:6px 12px;}
+  .btn-whatsapp-contact{font-size:10px;padding:7px 14px;}
+  .contact-avion{font-size:24px;}
+
+  .pied-ligne1{gap:10px;}
+  .nav-pied a{font-size:9px;}
+  .sociaux a{font-size:14px;}
+  .pied-ligne2{font-size:9px;}
+}
+
+/* ============================================================
+   RESPONSIVE — TÉLÉPHONE
+   ============================================================ */
+@media(max-width:768px){
+  .container{
+    padding-left:var(--marge-tel);
+    padding-right:var(--marge-tel);
+  }
+  .entete .container{height:60px;gap:6px;}
+  .logo-rond{width:34px;height:34px;}
+  .bloc-identite{gap:6px;}
+  .bloc-identite .nom-agence{font-size:9px;}
+  .bloc-identite .slogan{font-size:5.5px;letter-spacing:.6px;}
+  .nav-desktop{display:none;}
+  .btn-whatsapp.desktop{display:none;}
+  .burger{display:block;font-size:20px;}
+
+  .banniere{height:270px;background-position:70% center;}
+  .banniere-contenu{max-width:100%;padding-right:16px;}
+  .banniere-contenu h1{font-size:29px;margin-bottom:8px;}
+  .banniere-contenu p{font-size:10px;margin-bottom:14px;max-width:100%;}
+  .banniere-boutons{gap:6px;}
+  .btn-jaune,.btn-transparent{font-size:9px;padding:7px 13px;}
+  .btn-transparent{padding:5px 12px;}
+
+  .avantages .container{grid-template-columns:repeat(4,1fr);}
+  .avantage{height:68px;padding:3px 2px;border-right:1px solid #d8e8e1;}
+  .avantage i{font-size:18px;margin-bottom:2px;}
+  .avantage h4{font-size:7.5px;letter-spacing:0;line-height:1.1;}
+  .avantage p{font-size:6.5px;line-height:1.2;max-width:90px;}
+
+  .destinations{padding:22px 0 28px;}
+  .titre-section h2{font-size:17px;}
+  .titre-section p{font-size:9px;}
+  .grille-destinations{gap:var(--ecart-dest-tel);}
+  .carte-destination{height:160px;border-radius:5px;}
+  .carte-destination .photo{flex:0 0 48%;}
+  .carte-destination .photo .nom-photo{font-size:11px;bottom:6px;left:7px;}
+  .carte-destination .panneau{flex:0 0 52%;padding:7px 7px 7px 8px;}
+  .carte-destination .panneau .desc{font-size:7.5px;line-height:1.25;margin-bottom:3px;}
+  .carte-destination .panneau ul{margin-bottom:3px;}
+  .carte-destination .panneau ul li{font-size:6.5px;gap:3px;margin-bottom:2px;}
+  .carte-destination .panneau ul li i{font-size:6.5px;}
+  .btn-destination{font-size:6.5px;padding:4px 8px;gap:3px;}
+  .btn-destination i{font-size:6px;}
+
+  .excursions{padding:6px 0 28px;}
+  .grille-excursions{gap:var(--ecart-exc-tel);}
+  .carte-excursion .img{height:50px;}
+  .carte-excursion .contenu{padding:5px 4px 7px;}
+  .carte-excursion .contenu h4{font-size:8px;margin-bottom:2px;}
+  .carte-excursion .contenu p{font-size:7px;line-height:1.2;margin-bottom:4px;min-height:18px;}
+  .carte-excursion .contenu .fleche{font-size:9px;}
+
+  .agence{padding:6px 0 28px;}
+  .agence .container{grid-template-columns:27% 40% 33%;gap:var(--ecart-dest-tel);}
+  .agence-photo img{min-height:120px;}
+  .agence-texte h3{font-size:10.5px;margin-bottom:2px;}
+  .agence-texte .accroche{font-size:8px;margin-bottom:5px;}
+  .agence-texte p{font-size:7.5px;line-height:1.35;margin-bottom:7px;}
+  .btn-en-savoir{font-size:7px;padding:5px 10px;gap:3px;}
+  .agence-panneau{padding:8px 6px;gap:7px;border-radius:7px;}
+  .engagement{gap:5px;}
+  .engagement i{font-size:12px;width:16px;}
+  .engagement h5{font-size:7.5px;}
+  .engagement p{font-size:6.5px;line-height:1.2;}
+
+  .bande-contact{padding:12px 0;}
+  .bande-contact .container{grid-template-columns:auto 1fr auto;gap:6px;}
+  .contact-avion{font-size:20px;}
+  .contact-texte h3{font-size:11px;margin-bottom:1px;}
+  .contact-texte p{font-size:8px;}
+  .btn-whatsapp-contact{font-size:8px;padding:5px 10px;gap:4px;}
+  .contact-coord{font-size:7px;padding:4px 8px;gap:1px;}
+  .contact-coord i{font-size:7px;}
+
+  .pied{padding:14px 0 10px;}
+  .pied-ligne1{grid-template-columns:1fr;gap:8px;text-align:center;justify-items:center;}
+  .logo-pied-bloc{justify-content:center;}
+  .nav-pied{gap:6px;}
+  .nav-pied a{font-size:7.5px;}
+  .nav-pied a:not(:last-child)::after{margin-left:6px;}
+  .sociaux{gap:12px;}
+  .sociaux a{font-size:13px;}
+  .pied-ligne2{flex-direction:column;align-items:center;text-align:center;font-size:7.5px;gap:3px;}
+
+  .langue-flottant{bottom:14px;right:14px;}
+  .btn-langue-flottant{padding:9px 14px;font-size:11px;gap:6px;}
+  .btn-langue-flottant i{font-size:12px;}
+  .menu-langue-flottant{min-width:140px;}
+  .menu-langue-flottant li{padding:9px 14px;font-size:12px;}
+}
+
+/* Ajustement très petits écrans */
+@media(max-width:400px){
+  .avantage h4{font-size:6.5px;}
+  .avantage p{font-size:5.8px;}
+  .carte-destination{height:150px;}
+  .carte-destination .panneau .desc{font-size:6.8px;}
+  .carte-destination .panneau ul li{font-size:6px;}
+  .carte-excursion .img{height:44px;}
+  .carte-excursion .contenu h4{font-size:7px;}
+  .carte-excursion .contenu p{font-size:6.2px;min-height:16px;}
+  .agence-texte h3{font-size:9.5px;}
+  .agence-texte p{font-size:6.8px;}
+  .engagement h5{font-size:6.8px;}
+  .engagement p{font-size:5.8px;}
+  .bloc-identite .nom-agence{font-size:8px;}
+  .bloc-identite .slogan{font-size:5px;}
+}
+
+   /* ============================================================
+   AMÉLIORATIONS MOBILES — Vue téléphone optimale
+   ============================================================ */
+@media(max-width:768px){
+
+  /* Bannière plus aérée */
+  .banniere{
+    height:auto !important;
+    min-height:320px;
+    padding:40px 0;
+    background-position:65% center;
+  }
+  .banniere-contenu h1{font-size:34px !important;line-height:1.1;}
+  .banniere-contenu p{font-size:13px !important;line-height:1.5;}
+
+  /* Destinations : 1 colonne */
+  .grille-destinations{
+    grid-template-columns:1fr !important;
+    gap:14px;
+  }
+  .carte-destination{
+    height:auto;
+    flex-direction:column;
+  }
+  .carte-destination .photo{
+    flex:0 0 auto;
+    height:150px;
+    width:100%;
+  }
+  .carte-destination .panneau{
+    flex:1;
+    width:100%;
+    padding:12px 14px;
+  }
+  .carte-destination .panneau .desc{font-size:12px;line-height:1.5;margin-bottom:8px;}
+  .carte-destination .panneau ul li{font-size:11px;margin-bottom:4px;}
+  .btn-destination{font-size:11px;padding:8px 16px;}
+
+
+
+  /* Agence : 1 colonne */
+  .agence .container{
+    grid-template-columns:1fr !important;
+    gap:16px;
+  }
+  .agence-photo img{min-height:200px;}
+  .agence-texte h3{font-size:20px;}
+  .agence-texte .accroche{font-size:14px;}
+  .agence-texte p{font-size:13px;line-height:1.6;}
+  .btn-en-savoir{font-size:13px;padding:10px 20px;}
+  .agence-panneau{padding:16px 14px;gap:14px;}
+  .engagement i{font-size:22px;width:30px;}
+  .engagement h5{font-size:14px;}
+  .engagement p{font-size:12px;}
+
+  /* Bandeau contact centré */
+  .bande-contact .container{
+    grid-template-columns:1fr !important;
+    gap:14px;
+    text-align:center;
+  }
+  .contact-avion{font-size:32px;justify-self:center;}
+  .contact-texte h3{font-size:16px;}
+  .contact-texte p{font-size:12px;}
+  .contact-droite{
+    justify-content:center;
+    gap:10px;
+    flex-direction:column;
+  }
+  .btn-whatsapp-contact{font-size:13px;padding:10px 18px;justify-content:center;}
+  .contact-coord{align-items:center;font-size:12px;padding:8px 16px;}
+
+  /* Pied de page centré */
+  .pied-ligne1{
+    grid-template-columns:1fr !important;
+    gap:14px;
+    text-align:center;
+    justify-items:center;
+  }
+  .logo-pied-bloc{justify-content:center;}
+  .nav-pied{gap:10px;justify-content:center;flex-wrap:wrap;}
+  .nav-pied a{font-size:11px;padding:4px 6px;}
+  .nav-pied a:not(:last-child)::after{display:none;}
+  .sociaux{justify-content:center;gap:18px;}
+  .sociaux a{font-size:18px;}
+  .pied-ligne2{
+    flex-direction:column;
+    align-items:center;
+    text-align:center;
+    font-size:10px;
+    gap:6px;
+  }
+
+  /* Avantages : texte lisible */
+  .avantages .container{grid-template-columns:repeat(2,1fr) !important;}
+  .avantage{height:auto;padding:16px 10px;border-right:none;border-bottom:1px solid #d8e8e1;}
+  .avantage:nth-child(2n){border-right:none;}
+  .avantage:nth-child(odd){border-right:1px solid #d8e8e1;}
+  .avantage:nth-child(3),.avantage:nth-child(4){border-bottom:none;}
+  .avantage i{font-size:26px;}
+  .avantage h4{font-size:11px;line-height:1.2;}
+  .avantage p{font-size:9px;line-height:1.3;max-width:none;}
+}
+/* ============================================================
+   CARROUSEL DECK POUR EXCURSIONS SUR MOBILE
+   ============================================================ */
+@media(max-width:768px){
+
+  /* Le conteneur devient une zone de deck */
+  .grille-excursions{
+    display:block;
+    position:relative;
+    overflow:visible;
+    padding:20px 0 30px;
+    min-height:380px;
+    perspective:1000px;
+    gap:0;
+  }
+
+  /* Chaque carte devient positionnée absolument */
+  .carte-excursion{
+    position:absolute;
+    top:50%;
+    left:50%;
+    width:75%;
+    max-width:280px;
+    transform:translate(-50%, -50%) scale(0.85);
+    opacity:0;
+    transition:transform .5s cubic-bezier(.4,.0,.2,1),
+               opacity .5s ease,
+               z-index 0s;
+    z-index:1;
+    cursor:pointer;
+    pointer-events:none;
+    border-radius:12px;
+    box-shadow:0 10px 30px rgba(0,0,0,.2);
+    margin:0;
+  }
+
+  /* Carte active (au centre) */
+  .carte-excursion.deck-active{
+    transform:translate(-50%, -50%) scale(1);
+    opacity:1;
+    z-index:10;
+    pointer-events:auto;
+    box-shadow:0 15px 40px rgba(0,0,0,.35);
+    border:2px solid var(--jaune-dore);
+  }
+
+  /* Carte précédente (à gauche, partiellement visible) */
+  .carte-excursion.deck-prev{
+    transform:translate(-95%, -50%) scale(0.75) rotate(-4deg);
+    opacity:0.6;
+    z-index:5;
+    pointer-events:auto;
+    filter:brightness(0.85);
+  }
+
+  /* Carte suivante (à droite, partiellement visible) */
+  .carte-excursion.deck-next{
+    transform:translate(-5%, -50%) scale(0.75) rotate(4deg);
+    opacity:0.6;
+    z-index:5;
+    pointer-events:auto;
+    filter:brightness(0.85);
+  }
+
+  /* Cartes cachées */
+  .carte-excursion.deck-hidden{
+    transform:translate(-50%, -50%) scale(0.5);
+    opacity:0;
+    z-index:0;
+    pointer-events:none;
+  }
+
+  /* Image et texte de la carte active sur mobile */
+  .carte-excursion .img{height:150px;}
+  .carte-excursion .contenu{padding:12px 14px;}
+  .carte-excursion .contenu h4{font-size:15px;}
+  .carte-excursion .contenu p{font-size:12px;min-height:auto;line-height:1.4;}
+
+  /* Flèches de navigation sous le deck */
+  .deck-fleches{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    margin-top:10px;
+  }
+  .deck-fleches button{
+    width:42px;
+    height:42px;
+    border-radius:50%;
+    background:var(--vert-profond);
+    color:var(--blanc);
+    font-size:16px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    box-shadow:0 4px 15px rgba(0,0,0,.2);
+    transition:transform .2s;
+  }
+  .deck-fleches button:active{transform:scale(0.9);}
+
+  /* Points indicateurs */
+  .deck-indicateurs{
+    display:flex;
+    justify-content:center;
+    gap:8px;
+    margin-top:14px;
+  }
+  .deck-indicateurs span{
+    width:8px;
+    height:8px;
+    border-radius:50%;
+    background:var(--vert-tres-pale);
+    border:1px solid var(--vert-profond);
+    transition:all .3s;
+    cursor:pointer;
+  }
+  .deck-indicateurs span.actif{
+    background:var(--vert-profond);
+    width:24px;
+    border-radius:4px;
+  }
+}
+
+/* Sur ordinateur, cacher les flèches et points */
+@media(min-width:769px){
+  .deck-fleches,
+  .deck-indicateurs{display:none !important;}
+}
+</style>
+</head>
+<body>
+    
+ <!-- ============================================================
+     INTESTAZIONE
+     ============================================================ -->
+<header class="entete">
+  <div class="container">
+    <!-- Identità del marchio: logo rotondo + nome + slogan -->
+    <a href="#" class="bloc-identite">
+      <div class="logo-rond">
+        <img src="logo.png" alt="Simbolo di Mada Vibe Discover">
+      </div>
+      <div class="texte-identite">
+        <span class="nom-agence">Mada Vibe Discover</span>
+        <span class="slogan">Esplorare, vivere e condividere</span>
+      </div>
+    </a>
+
+    <nav class="nav-desktop">
+      <a href="#" class="actif" data-i18n="nav_accueil">Home</a>
+      <a href="#" data-i18n="nav_destinations">Destinazioni</a>
+      <a href="#" data-i18n="nav_excursions">Escursioni</a>
+      <a href="#" data-i18n="nav_apropos">Chi siamo</a>
+      <a href="#" data-i18n="nav_guide">Guida di viaggio</a>
+      <a href="#" data-i18n="nav_contact">Contatti</a>
+    </nav>
+
+    <a href="https://wa.me/261323962286" target="_blank" rel="noopener" class="btn-whatsapp desktop">
+      <i class="fab fa-whatsapp"></i> WhatsApp
+    </a>
+
+    <button class="burger" id="burger" aria-label="Apri il menu">
+      <i class="fas fa-bars"></i>
+    </button>
+  </div>
+
+  <!-- Menu mobile -->
+  <nav class="menu-mobile" id="menuMobile">
+    <ul>
+      <li><a href="#" data-i18n="nav_accueil">Home</a></li>
+      <li><a href="#" data-i18n="nav_destinations">Destinazioni</a></li>
+      <li><a href="#" data-i18n="nav_excursions">Escursioni</a></li>
+      <li><a href="#" data-i18n="nav_apropos">Chi siamo</a></li>
+      <li><a href="#" data-i18n="nav_guide">Guida di viaggio</a></li>
+      <li><a href="#" data-i18n="nav_contact">Contatti</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- ============================================================
+     BANNER PRINCIPALE
+     ============================================================ -->
+<section class="banniere">
+  <div class="container banniere-contenu">
+    <h1 data-i18n="banniere_titre">Scoprite il vero<br>Madagascar</h1>
+    <p data-i18n="banniere_texte">Nosy Be e il nord del Madagascar vi aspettano con esperienze autentiche tra natura, cultura e incontri con la gente del posto.</p>
+    <div class="banniere-boutons">
+      <a href="#destinations" class="btn-jaune"><i class="fas fa-compass"></i> <span data-i18n="btn_destinations">Scoprite le nostre destinazioni</span></a>
+      <a href="https://wa.me/261323962286" target="_blank" rel="noopener" class="btn-transparent"><i class="fas fa-envelope"></i> <span data-i18n="btn_devis">Richiedete un preventivo</span></a>
+    </div>
+  </div>
+</section>
+<!-- ============================================================
+     VANTAGGI — 4 SEZIONI
+     ============================================================ -->
+<section class="avantages">
+  <div class="container">
+    <div class="avantage">
+      <i class="fas fa-leaf"></i>
+      <h4 data-i18n="av_nature">Natura straordinaria</h4>
+      <p data-i18n="av_nature_desc">Spiagge, isole, fauna e paesaggi unici</p>
+    </div>
+    <div class="avantage">
+      <i class="fas fa-user-tie"></i>
+      <h4 data-i18n="av_guides">Guide locali</h4>
+      <p data-i18n="av_guides_desc">Un team appassionato e attento alle vostre esigenze</p>
+    </div>
+    <div class="avantage">
+      <i class="fas fa-shield-alt"></i>
+      <h4 data-i18n="av_confiance">Viaggiate in tranquillità</h4>
+      <p data-i18n="av_confiance_desc">Organizzazione e assistenza durante il viaggio</p>
+    </div>
+    <div class="avantage">
+      <i class="fas fa-heart"></i>
+      <h4 data-i18n="av_experiences">Esperienze autentiche</h4>
+      <p data-i18n="av_experiences_desc">Scoperta, condivisione e rispetto</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     LE NOSTRE DESTINAZIONI — 2 SCHEDE AFFIANCATE
+     ============================================================ -->
+<section class="destinations" id="destinations">
+  <div class="container">
+    <div class="titre-section">
+      <div class="trait-dore"></div>
+      <h2 data-i18n="dest_titre">Le nostre destinazioni</h2>
+      <p data-i18n="dest_sous_titre">Due regioni imperdibili per vivere il Madagascar in modo diverso.</p>
+    </div>
+
+    <div class="grille-destinations">
+      <!-- Nosy Be -->
+      <a href="Nosy be.html" class="carte-destination">
+        <div class="photo" style="background-image:url('nosy be.jpg');">
+          <span class="nom-photo">Nosy Be</span>
+          <span class="sous-photo">Isole, spiagge ed escursioni in mare</span>
+        </div>
+        <div class="panneau">
+          <div>
+            <p class="desc" data-i18n="nosybe_desc">Godetevi spiagge paradisiache, esplorate le isole vicine e scoprite una natura incontaminata.</p>
+            <ul>
+              <li><i class="fas fa-check"></i> <span data-i18n="nosybe_l1">Nosy Iranja</span></li>
+              <li><i class="fas fa-check"></i> <span data-i18n="nosybe_l2">Nosy Komba e Tanikely</span></li>
+              <li><i class="fas fa-check"></i> <span data-i18n="nosybe_l3">Nosy Sakatia</span></li>
+              <li><i class="fas fa-check"></i> <span data-i18n="nosybe_l4">Tour della città di Nosy Be</span></li>
+              <li><i class="fas fa-check"></i> <span data-i18n="nosybe_l5">Altre escursioni disponibili</span></li>
+            </ul>
+          </div>
+          <span class="btn-destination"><span data-i18n="btn_nosybe">Scoprite Nosy Be</span> <i class="fas fa-arrow-right"></i></span>
+        </div>
+      </a>
+
+      <!-- Nord del Madagascar -->
+      <a href="Nord.html" class="carte-destination">
+        <div class="photo" style="background-image:url('diego.jpg');">
+          <span class="nom-photo">Nord del Madagascar</span>
+          <span class="sous-photo">Diego Suarez e dintorni</span>
+        </div>
+        <div class="panneau">
+          <div>
+            <p class="desc" data-i18n="tournord_desc">Paesaggi spettacolari, spiagge selvagge e una natura ancora incontaminata.</p>
+            <ul>
+              <li><i class="fas fa-check"></i> <span data-i18n="tournord_l1">Le Tre Baie</span></li>
+              <li><i class="fas fa-check"></i> <span data-i18n="tournord_l2">Il Mare di Smeraldo</span></li>
+              <li><i class="fas fa-check"></i> <span data-i18n="tournord_l3">Montagna d’Ambra</span></li>
+              <li><i class="fas fa-check"></i> <span data-i18n="tournord_l4">Gli Tsingy Rossi</span></li>
+              <li><i class="fas fa-check"></i> <span data-i18n="tournord_l5">Ramena e il Pan di Zucchero</span></li>
+              <li><i class="fas fa-check"></i> <span data-i18n="tournord_l6">Ankarana (in base all'itinerario)</span></li>
+            </ul>
+          </div>
+          <span class="btn-destination"><span data-i18n="btn_tournord">Scoprite il nord del Madagascar</span> <i class="fas fa-arrow-right"></i></span>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+<!-- ============================================================
+     ESCURSIONI — 5 schede in una riga
+     ============================================================ -->
+<section class="excursions" id="excursions">
+  <div class="container">
+    <div class="titre-section">
+      <div class="trait-dore"></div>
+      <h2 data-i18n="exc_titre">Escursioni popolari</h2>
+      <p data-i18n="exc_sous_titre">Escursioni selezionate per vivere il meglio delle nostre destinazioni.</p>
+    </div>
+
+    <div class="grille-excursions" id="grilleExcursions">
+      <article class="carte-excursion" data-exc="iranja" tabindex="0">
+        <div class="img" style="background-image:url('nosy iranja.jpg');"></div>
+        <div class="contenu">
+          <h4>Nosy Iranja</h4>
+          <p data-i18n="exc_iranja">Una giornata su un'isola paradisiaca</p>
+          <span class="fleche"><i class="fas fa-arrow-right"></i></span>
+          <span class="btn-excursion" data-i18n="btn_consulter">Scopri</span>
+        </div>
+        <button class="btn-fermer-carte" aria-label="Chiudi"><i class="fas fa-times"></i></button>
+      </article>
+
+      <article class="carte-excursion" data-exc="emeraude" tabindex="0">
+        <div class="img" style="background-image:url('emerauld.jpg');"></div>
+        <div class="contenu">
+          <h4>Mar Smeraldo</h4>
+          <p data-i18n="exc_emeraude">La bellezza di una laguna unica</p>
+          <span class="fleche"><i class="fas fa-arrow-right"></i></span>
+          <span class="btn-excursion" data-i18n="btn_consulter">Scopri</span>
+        </div>
+        <button class="btn-fermer-carte" aria-label="Chiudi"><i class="fas fa-times"></i></button>
+      </article>
+
+      <article class="carte-excursion" data-exc="ambre" tabindex="0">
+        <div class="img" style="background-image:url('ambre.jpg');"></div>
+        <div class="contenu">
+          <h4>Montagna d'Ambra</h4>
+          <p data-i18n="exc_ambre">Escursioni a piedi e biodiversità</p>
+          <span class="fleche"><i class="fas fa-arrow-right"></i></span>
+          <span class="btn-excursion" data-i18n="btn_consulter">Scopri</span>
+        </div>
+        <button class="btn-fermer-carte" aria-label="Chiudi"><i class="fas fa-times"></i></button>
+      </article>
+
+      <article class="carte-excursion" data-exc="komba" tabindex="0">
+        <div class="img" style="background-image:url('komba.jpg');"></div>
+        <div class="contenu">
+          <h4>Nosy Komba</h4>
+          <p data-i18n="exc_komba">Lemuri e vita marina</p>
+          <span class="fleche"><i class="fas fa-arrow-right"></i></span>
+          <span class="btn-excursion" data-i18n="btn_consulter">Scopri</span>
+        </div>
+        <button class="btn-fermer-carte" aria-label="Chiudi"><i class="fas fa-times"></i></button>
+      </article>
+
+      <article class="carte-excursion" data-exc="tsingy" tabindex="0">
+        <div class="img" style="background-image:url('tsingy.jpg');"></div>
+        <div class="contenu">
+          <h4>Tsingy Rossi</h4>
+          <p data-i18n="exc_tsingy">Paesaggi sorprendenti</p>
+          <span class="fleche"><i class="fas fa-arrow-right"></i></span>
+          <span class="btn-excursion" data-i18n="btn_consulter">Scopri</span>
+        </div>
+        <button class="btn-fermer-carte" aria-label="Chiudi"><i class="fas fa-times"></i></button>
+      </article>
+    </div>
+
+    <!-- Frecce di navigazione (solo mobile) -->
+    <div class="deck-fleches">
+      <button type="button" id="deckPrev" aria-label="Precedente">
+        <i class="fas fa-chevron-left"></i>
+      </button>
+      <button type="button" id="deckNext" aria-label="Successivo">
+        <i class="fas fa-chevron-right"></i>
+      </button>
+    </div>
+
+    <!-- Indicatori (solo mobile) -->
+    <div class="deck-indicateurs" id="deckIndicateurs"></div>
+  </div>
+</section>
+
+<!-- Overlay per la scheda dell'escursione ingrandita -->
+<div class="overlay-excursion" id="overlayExcursion"></div>
+<!-- ============================================================
+     PRESENTAZIONE DELL'AGENZIA — 3 colonne
+     ============================================================ -->
+<section class="agence" id="agence">
+  <div class="container">
+    <div class="agence-photo">
+      <img src="1.jpg"
+           alt="Guida dell'agenzia Mada Vibe Discover">
+    </div>
+    <div class="agence-texte">
+      <h3 data-i18n="agence_titre">Mada Vibe Discover</h3>
+      <p class="accroche" data-i18n="agence_accroche">Più di un viaggio, un incontro speciale.</p>
+      <p data-i18n="agence_texte">Mada Vibe Discover è un'agenzia locale con sede in Madagascar. Organizziamo escursioni e soggiorni su misura, principalmente a Nosy Be e nel nord del Madagascar.<br><br>Il nostro obiettivo è farvi scoprire la nostra isola attraverso i suoi paesaggi, la sua cultura e la gentilezza dei suoi abitanti, offrendovi al tempo stesso un servizio affidabile e personalizzato.</p>
+      <a href="#" class="btn-en-savoir" data-i18n="btn_en_savoir">Scopri di più</a>
+    </div>
+    <div class="agence-panneau">
+      <div class="engagement">
+        <i class="fas fa-map-marked-alt"></i>
+        <div>
+          <h5 data-i18n="eng1">Conoscenza del territorio</h5>
+          <p data-i18n="eng1_desc">Itinerari ben organizzati e sicuri</p>
+        </div>
+      </div>
+      <div class="engagement">
+        <i class="fas fa-comments"></i>
+        <div>
+          <h5 data-i18n="eng2">Ascolto e personalizzazione</h5>
+          <p data-i18n="eng2_desc">Viaggi secondo i vostri desideri</p>
+        </div>
+      </div>
+      <div class="engagement">
+        <i class="fas fa-hands-helping"></i>
+        <div>
+          <h5 data-i18n="eng3">Rispetto e sostegno locale</h5>
+          <p data-i18n="eng3_desc">Un approccio responsabile e sostenibile</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     FASCIA DI CONTATTO
+     ============================================================ -->
+<section class="bande-contact" id="contact">
+  <div class="container">
+    <div class="contact-avion"><i class="fas fa-paper-plane"></i></div>
+    <div class="contact-texte">
+      <h3 data-i18n="contact_titre">Pronti a vivere la vostra avventura in Madagascar?</h3>
+      <p data-i18n="contact_texte">Contattateci subito per organizzare la vostra escursione o richiedere un preventivo personalizzato.</p>
+    </div>
+    <div class="contact-droite">
+      <a href="https://wa.me/261323962286" target="_blank" rel="noopener" class="btn-whatsapp-contact">
+        <i class="fab fa-whatsapp"></i> <span data-i18n="btn_wa_contact">Scriveteci su WhatsApp</span>
+      </a>
+      <div class="contact-coord">
+        <a href="tel:+261323962286"><i class="fas fa-phone-alt"></i> +261 32 39 622 86</a>
+        <a href="mailto:hajahabibeabdou@gmail.com"><i class="fas fa-envelope"></i> hajahabibeabdou@gmail.com</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     PIÈ DI PAGINA
+     ============================================================ -->
+<footer class="pied">
+  <div class="container">
+    <div class="pied-ligne1">
+      <div class="logo-pied-bloc">
+        <div class="logo-rond-pied">
+          <img src="logo.png" alt="Simbolo di Mada Vibe Discover">
+        </div>
+        <div class="texte-pied-identite">
+          <span class="nom-pied">Mada Vibe Discover</span>
+          <span class="slogan-pied">Esplorare, vivere e condividere</span>
+        </div>
+      </div>
+      <nav class="nav-pied">
+        <a href="#" data-i18n="nav_accueil">Home</a>
+        <a href="#" data-i18n="nav_destinations">Destinazioni</a>
+        <a href="#" data-i18n="nav_excursions">Escursioni</a>
+        <a href="#" data-i18n="nav_apropos">Chi siamo</a>
+        <a href="#" data-i18n="nav_guide">Guida di viaggio</a>
+        <a href="#" data-i18n="nav_contact">Contatti</a>
+      </nav>
+      <div class="sociaux">
+        <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://youtube.com" target="_blank" rel="noopener" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+      </div>
+    </div>
+    <div class="pied-ligne2">
+      <span data-i18n="pied_copyright">© 2025 Mada Vibe Discover. Tutti i diritti riservati.</span>
+      <span data-i18n="pied_slogan">Madagascar, un'isola, mille emozioni.</span>
+    </div>
+  </div>
+</footer>
+<!-- ============================================================
+     PULSANTE LINGUA FLOTTANTE (in basso a destra)
+     ============================================================ -->
+<div class="langue-flottant">
+  <ul class="menu-langue-flottant" id="menuLangueFlottant">
+    <li data-lang="fr"><img src="https://flagcdn.com/w20/fr.png" alt="FR"> Français</li>
+    <li data-lang="en"><img src="https://flagcdn.com/w20/gb.png" alt="EN"> English</li>
+    <li data-lang="de"><img src="https://flagcdn.com/w20/de.png" alt="DE"> Deutsch</li>
+    <li data-lang="it" class="actif"><img src="https://flagcdn.com/w20/it.png" alt="IT"> Italiano</li>
+  </ul>
+  <button class="btn-langue-flottant" id="btnLangueFlottant" aria-label="Cambia lingua">
+    <i class="fas fa-globe"></i>
+    <span id="langueActuelle">IT</span>
+  </button>
+</div>
+
+<script>
+/* ============================================================
+   TRADUCTIONS — 4 langues
+   ============================================================ */
+const traductions = {
+  fr: {
+   
+meta_title: "Mada Vibe Discover | Excursions à Nosy Be et dans le Nord de Madagascar",
+    nav_accueil: "Accueil",
+    nav_destinations: "Destinations",
+    nav_excursions: "Excursions",
+    nav_apropos: "À propos",
+    nav_guide: "Guide de voyage",
+    nav_contact: "Contact",
+    banniere_titre: "Découvrez la vraie<br>Madagascar",
+    banniere_texte: "Nosy Be et le Tour du Nord vous attendent pour des expériences authentiques, entre nature, culture et rencontres.",
+    btn_destinations: "Découvrir nos destinations",
+    btn_devis: "Demander un devis",
+    av_nature: "Nature exceptionnelle",
+    av_nature_desc: "Plages, îles, faune et paysages uniques",
+    av_guides: "Guides locaux",
+    av_guides_desc: "Une équipe passionnée et à l'écoute",
+    av_confiance: "Voyage en toute confiance",
+    av_confiance_desc: "Organisation et accompagnement",
+    av_experiences: "Des expériences authentiques",
+    av_experiences_desc: "Découverte, partage et respect",
+    dest_titre: "Nos destinations",
+    dest_sous_titre: "Deux régions incontournables pour vivre Madagascar autrement.",
+    nosybe_desc: "Profitez de plages paradisiaques, explorez les îles environnantes et découvrez une nature préservée.",
+    nosybe_l1: "Nosy Iranja",
+    nosybe_l2: "Nosy Komba & Tanikely",
+    nosybe_l3: "Nosy Sakatia",
+    nosybe_l4: "Tour de ville de Nosy Be",
+    nosybe_l5: "Autres excursions disponibles",
+    tournord_desc: "Des paysages grandioses, des plages sauvages et une nature encore préservée.",
+    tournord_l1: "Les Trois Baies",
+    tournord_l2: "La Mer d'Émeraude",
+    tournord_l3: "La Montagne d'Ambre",
+    tournord_l4: "Les Tsingy Rouges",
+    tournord_l5: "Ramena et le Pain de Sucre",
+    tournord_l6: "Ankarana (selon circuit)",
+    btn_nosybe: "Découvrir Nosy Be",
+    btn_tournord: "Découvrir le Tour du Nord",
+    exc_titre: "Excursions populaires",
+    exc_sous_titre: "Des sorties sélectionnées pour vivre le meilleur de nos destinations.",
+    exc_iranja: "Journée sur une île paradisiaque",
+    exc_emeraude: "La beauté d'un lagon unique",
+    exc_ambre: "Randonnée et biodiversité",
+    exc_komba: "Lémuriens et vie sous-marine",
+    exc_tsingy: "Paysages surprenants",
+    btn_consulter: "Consulter",
+    agence_titre: "Mada Vibe Discover",
+    agence_accroche: "Plus qu'un voyage, une rencontre.",
+    agence_texte: "Mada Vibe Discover est une agence locale basée à Madagascar. Nous organisons des excursions et des séjours sur mesure, principalement à Nosy Be et dans le Tour du Nord.<br><br>Notre objectif est de vous faire découvrir notre île à travers ses paysages, sa culture et la gentillesse de ses habitants, tout en vous offrant un service fiable et personnalisé.",
+    btn_en_savoir: "En savoir plus",
+    eng1: "Connaissance du terrain",
+    eng1_desc: "Des itinéraires adaptés et sécurisés",
+    eng2: "Écoute et personnalisation",
+    eng2_desc: "Des voyages selon vos envies",
+    eng3: "Respect et soutien local",
+    eng3_desc: "Une approche responsable et durable",
+    contact_titre: "Prêt à vivre votre aventure à Madagascar ?",
+    contact_texte: "Contactez-nous dès maintenant pour organiser votre excursion ou demander un devis personnalisé.",
+    btn_wa_contact: "Nous écrire sur WhatsApp",
+    pied_copyright: "© 2025 Mada Vibe Discover. Tous droits réservés.",
+    pied_slogan: "Madagascar, une île, mille émotions."
+  },
+  en: {
+     meta_title: "Mada Vibe Discover | Tours in Nosy Be and Northern Madagascar",
+    nav_accueil: "Home",
+    nav_destinations: "Destinations",
+    nav_excursions: "Tours",
+    nav_apropos: "About",
+    nav_guide: "Travel guide",
+    nav_contact: "Contact",
+    banniere_titre: "Discover the real<br>Madagascar",
+    banniere_texte: "Nosy Be and the Northern Tour await you for authentic experiences, between nature, culture and encounters.",
+    btn_destinations: "Discover our destinations",
+    btn_devis: "Request a quote",
+    av_nature: "Exceptional nature",
+    av_nature_desc: "Beaches, islands, wildlife and unique landscapes",
+    av_guides: "Local guides",
+    av_guides_desc: "A passionate and attentive team",
+    av_confiance: "Travel with confidence",
+    av_confiance_desc: "Organization and support",
+    av_experiences: "Authentic experiences",
+    av_experiences_desc: "Discovery, sharing and respect",
+    dest_titre: "Our destinations",
+    dest_sous_titre: "Two must-see regions to experience Madagascar differently.",
+    nosybe_desc: "Enjoy paradise beaches, explore the surrounding islands and discover preserved nature.",
+    nosybe_l1: "Nosy Iranja",
+    nosybe_l2: "Nosy Komba & Tanikely",
+    nosybe_l3: "Nosy Sakatia",
+    nosybe_l4: "Nosy Be city tour",
+    nosybe_l5: "Other excursions available",
+    tournord_desc: "Majestic landscapes, wild beaches and still preserved nature.",
+    tournord_l1: "The Three Bays",
+    tournord_l2: "The Emerald Sea",
+    tournord_l3: "Amber Mountain",
+    tournord_l4: "The Red Tsingy",
+    tournord_l5: "Ramena and Pain de Sucre",
+    tournord_l6: "Ankarana (depending on circuit)",
+    btn_nosybe: "Discover Nosy Be",
+    btn_tournord: "Discover the Northern Tour",
+    exc_titre: "Popular excursions",
+    exc_sous_titre: "Selected outings to experience the best of our destinations.",
+    exc_iranja: "Day on a paradise island",
+    exc_emeraude: "The beauty of a unique lagoon",
+    exc_ambre: "Hiking and biodiversity",
+    exc_komba: "Lemurs and underwater life",
+    exc_tsingy: "Surprising landscapes",
+    btn_consulter: "View",
+    agence_titre: "Mada Vibe Discover",
+    agence_accroche: "More than a trip, an encounter.",
+    agence_texte: "Mada Vibe Discover is a local agency based in Madagascar. We organize tailor-made excursions and stays, mainly in Nosy Be and the Northern Tour.<br><br>Our goal is to help you discover our island through its landscapes, culture and the kindness of its inhabitants, while offering you a reliable and personalized service.",
+    btn_en_savoir: "Learn more",
+    eng1: "Knowledge of the terrain",
+    eng1_desc: "Adapted and secure itineraries",
+    eng2: "Listening and personalization",
+    eng2_desc: "Trips according to your desires",
+    eng3: "Respect and local support",
+    eng3_desc: "A responsible and sustainable approach",
+    contact_titre: "Ready to live your adventure in Madagascar?",
+    contact_texte: "Contact us now to organize your excursion or request a personalized quote.",
+    btn_wa_contact: "Write to us on WhatsApp",
+    pied_copyright: "© 2025 Mada Vibe Discover. All rights reserved.",
+    pied_slogan: "Madagascar, one island, a thousand emotions."
+  },
+  de: {
+     meta_title: "Mada Vibe Discover | Ausflüge auf Nosy Be und in Nordmadagaskar",
+    nav_accueil: "Startseite",
+    nav_destinations: "Reiseziele",
+    nav_excursions: "Ausflüge",
+    nav_apropos: "Über uns",
+    nav_guide: "Reiseführer",
+    nav_contact: "Kontakt",
+    banniere_titre: "Entdecken Sie das echte<br>Madagaskar",
+    banniere_texte: "Nosy Be und die Nordtour erwarten Sie mit authentischen Erlebnissen zwischen Natur, Kultur und Begegnungen.",
+    btn_destinations: "Unsere Reiseziele entdecken",
+    btn_devis: "Angebot anfordern",
+    av_nature: "Außergewöhnliche Natur",
+    av_nature_desc: "Strände, Inseln, Tierwelt und einzigartige Landschaften",
+    av_guides: "Einheimische Guides",
+    av_guides_desc: "Ein leidenschaftliches und aufmerksames Team",
+    av_confiance: "Sorglos reisen",
+    av_confiance_desc: "Organisation und Begleitung",
+    av_experiences: "Authentische Erlebnisse",
+    av_experiences_desc: "Entdeckung, Austausch und Respekt",
+    dest_titre: "Unsere Reiseziele",
+    dest_sous_titre: "Zwei unumgängliche Regionen, um Madagaskar anders zu erleben.",
+    nosybe_desc: "Genießen Sie Traumstrände, erkunden Sie die umliegenden Inseln und entdecken Sie eine erhaltene Natur.",
+    nosybe_l1: "Nosy Iranja",
+    nosybe_l2: "Nosy Komba & Tanikely",
+    nosybe_l3: "Nosy Sakatia",
+    nosybe_l4: "Stadtrundfahrt Nosy Be",
+    nosybe_l5: "Weitere Ausflüge verfügbar",
+    tournord_desc: "Großartige Landschaften, wilde Strände und eine noch erhaltene Natur.",
+    tournord_l1: "Die Drei Buchten",
+    tournord_l2: "Das Smaragdmeer",
+    tournord_l3: "Der Amberberg",
+    tournord_l4: "Die Roten Tsingy",
+    tournord_l5: "Ramena und Pain de Sucre",
+    tournord_l6: "Ankarana (je nach Route)",
+    btn_nosybe: "Nosy Be entdecken",
+    btn_tournord: "Die Nordtour entdecken",
+    exc_titre: "Beliebte Ausflüge",
+    exc_sous_titre: "Ausgewählte Ausflüge, um das Beste unserer Reiseziele zu erleben.",
+    exc_iranja: "Tag auf einer Paradiesinsel",
+    exc_emeraude: "Die Schönheit einer einzigartigen Lagune",
+    exc_ambre: "Wanderung und Artenvielfalt",
+    exc_komba: "Lemuren und Unterwasserwelt",
+    exc_tsingy: "Überraschende Landschaften",
+    btn_consulter: "Ansehen",
+    agence_titre: "Mada Vibe Discover",
+    agence_accroche: "Mehr als eine Reise, eine Begegnung.",
+    agence_texte: "Mada Vibe Discover ist eine lokale Agentur mit Sitz in Madagaskar. Wir organisieren maßgeschneiderte Ausflüge und Aufenthalte, hauptsächlich in Nosy Be und auf der Nordtour.<br><br>Unser Ziel ist es, Ihnen unsere Insel durch ihre Landschaften, ihre Kultur und die Freundlichkeit ihrer Bewohner näherzubringen und Ihnen gleichzeitig einen zuverlässigen und persönlichen Service zu bieten.",
+    btn_en_savoir: "Mehr erfahren",
+    eng1: "Kenntnis des Geländes",
+    eng1_desc: "Angepasste und sichere Routen",
+    eng2: "Zuhören und Personalisierung",
+    eng2_desc: "Reisen nach Ihren Wünschen",
+    eng3: "Respekt und lokale Unterstützung",
+    eng3_desc: "Ein verantwortungsvoller und nachhaltiger Ansatz",
+    contact_titre: "Bereit, Ihr Abenteuer in Madagaskar zu erleben?",
+    contact_texte: "Kontaktieren Sie uns jetzt, um Ihren Ausflug zu organisieren oder ein individuelles Angebot anzufordern.",
+    btn_wa_contact: "Schreiben Sie uns auf WhatsApp",
+    pied_copyright: "© 2025 Mada Vibe Discover. Alle Rechte vorbehalten.",
+    pied_slogan: "Madagaskar, eine Insel, tausend Emotionen."
+  },
+  it: {
+     meta_title: "Mada Vibe Discover | Escursioni a Nosy Be e nel nord del Madagascar",
+    nav_accueil: "Home",
+    nav_destinations: "Destinazioni",
+    nav_excursions: "Escursioni",
+    nav_apropos: "Chi siamo",
+    nav_guide: "Guida di viaggio",
+    nav_contact: "Contatti",
+    banniere_titre: "Scopri la vera<br>Madagascar",
+    banniere_texte: "Nosy Be e il Tour del Nord ti aspettano per esperienze autentiche, tra natura, cultura e incontri.",
+    btn_destinations: "Scopri le nostre destinazioni",
+    btn_devis: "Richiedi un preventivo",
+    av_nature: "Natura eccezionale",
+    av_nature_desc: "Spiagge, isole, fauna e paesaggi unici",
+    av_guides: "Guide locali",
+    av_guides_desc: "Una squadra appassionata e attenta",
+    av_confiance: "Viaggia in tutta sicurezza",
+    av_confiance_desc: "Organizzazione e accompagnamento",
+    av_experiences: "Esperienze autentiche",
+    av_experiences_desc: "Scoperta, condivisione e rispetto",
+    dest_titre: "Le nostre destinazioni",
+    dest_sous_titre: "Due regioni imperdibili per vivere il Madagascar in modo diverso.",
+    nosybe_desc: "Goditi spiagge paradisiache, esplora le isole circostanti e scopri una natura preservata.",
+    nosybe_l1: "Nosy Iranja",
+    nosybe_l2: "Nosy Komba & Tanikely",
+    nosybe_l3: "Nosy Sakatia",
+    nosybe_l4: "Tour della città di Nosy Be",
+    nosybe_l5: "Altre escursioni disponibili",
+    tournord_desc: "Paesaggi grandiosi, spiagge selvagge e una natura ancora preservata.",
+    tournord_l1: "Le Tre Baie",
+    tournord_l2: "Il Mare di Smeraldo",
+    tournord_l3: "La Montagna d'Ambra",
+    tournord_l4: "I Tsingy Rossi",
+    tournord_l5: "Ramena e il Pain de Sucre",
+    tournord_l6: "Ankarana (secondo circuito)",
+    btn_nosybe: "Scopri Nosy Be",
+    btn_tournord: "Scopri il Tour del Nord",
+    exc_titre: "Escursioni popolari",
+    exc_sous_titre: "Uscite selezionate per vivere il meglio delle nostre destinazioni.",
+    exc_iranja: "Giornata su un'isola paradisiaca",
+    exc_emeraude: "La bellezza di una laguna unica",
+    exc_ambre: "Escursione e biodiversità",
+    exc_komba: "Lemuri e vita sottomarina",
+    exc_tsingy: "Paesaggi sorprendenti",
+    btn_consulter: "Visualizza",
+    agence_titre: "Mada Vibe Discover",
+    agence_accroche: "Più di un viaggio, un incontro.",
+    agence_texte: "Mada Vibe Discover è un'agenzia locale con sede in Madagascar. Organizziamo escursioni e soggiorni su misura, principalmente a Nosy Be e nel Tour del Nord.<br><br>Il nostro obiettivo è farti scoprire la nostra isola attraverso i suoi paesaggi, la sua cultura e la gentilezza dei suoi abitanti, offrendoti un servizio affidabile e personalizzato.",
+    btn_en_savoir: "Scopri di più",
+    eng1: "Conoscenza del territorio",
+    eng1_desc: "Itinerari adattati e sicuri",
+    eng2: "Ascolto e personalizzazione",
+    eng2_desc: "Viaggi secondo i tuoi desideri",
+    eng3: "Rispetto e sostegno locale",
+    eng3_desc: "Un approccio responsabile e sostenibile",
+    contact_titre: "Pronto a vivere la tua avventura in Madagascar?",
+    contact_texte: "Contattaci ora per organizzare la tua escursione o richiedere un preventivo personalizzato.",
+    btn_wa_contact: "Scrivici su WhatsApp",
+    pied_copyright: "© 2025 Mada Vibe Discover. Tutti i diritti riservati.",
+    pied_slogan: "Madagascar, un'isola, mille emozioni."
+  }
+};
+let langueActive = 'it';
+
+function appliquerLangue(code) {
+  langueActive = code;
+  document.getElementById('langueActuelle').textContent = code.toUpperCase();
+
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const cle = el.getAttribute('data-i18n');
+    if (traductions[code] && traductions[code][cle]) {
+      if (traductions[code][cle].includes('<br>')) {
+        el.innerHTML = traductions[code][cle];
+      } else {
+        el.textContent = traductions[code][cle];
+      }
+    }
+  });
+
+  if (traductions[code] && traductions[code].meta_title) {
+    document.title = traductions[code].meta_title;
+  }
+
+  document.documentElement.lang = code;
+
+  document.querySelectorAll('#menuLangueFlottant li').forEach(li => {
+    li.classList.toggle('actif', li.getAttribute('data-lang') === code);
+  });
+
+  document.getElementById('menuLangueFlottant').classList.remove('ouvert');
+}
+
+/* Pulsante delle lingue */
+const btnLangueFlottant = document.getElementById('btnLangueFlottant');
+const menuLangueFlottant = document.getElementById('menuLangueFlottant');
+
+btnLangueFlottant.addEventListener('click', e => {
+  e.stopPropagation();
+  menuLangueFlottant.classList.toggle('ouvert');
+});
+
+menuLangueFlottant.querySelectorAll('li').forEach(li => {
+  li.addEventListener('click', e => {
+    appliquerLangue(e.currentTarget.getAttribute('data-lang'));
+    e.stopPropagation();
+  });
+});
+
+document.addEventListener('click', () => menuLangueFlottant.classList.remove('ouvert'));
+
+/* Menu mobile */
+const burger = document.getElementById('burger');
+const menuMobile = document.getElementById('menuMobile');
+
+burger.addEventListener('click', () => {
+  menuMobile.classList.toggle('ouvert');
+});
+
+menuMobile.querySelectorAll('a').forEach(a => {
+  a.addEventListener('click', () => menuMobile.classList.remove('ouvert'));
+});
+
+/* ============================================================
+   SCHEDE ESCURSIONI INGRANDITE
+   ============================================================ */
+const overlay = document.getElementById('overlayExcursion');
+let carteAgrandie = null;
+
+document.querySelectorAll('.carte-excursion').forEach(carte => {
+  carte.addEventListener('click', e => {
+    if (e.target.closest('.btn-excursion')) return;
+
+    if (e.target.closest('.btn-fermer-carte')) {
+      fermerCarte();
+      return;
+    }
+
+    if (window.innerWidth <= 1024) {
+      if (carteAgrandie === carte) {
+        fermerCarte();
+        return;
+      }
+
+      if (carteAgrandie) {
+        carteAgrandie.classList.remove('agrandie');
+      }
+
+      carte.classList.add('agrandie');
+      overlay.classList.add('ouvert');
+      carteAgrandie = carte;
+    }
+  });
+
+  carte.addEventListener('keydown', e => {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      carte.click();
+    }
+  });
+});
+
+function fermerCarte() {
+  if (carteAgrandie) {
+    carteAgrandie.classList.remove('agrandie');
+    carteAgrandie = null;
+  }
+
+  overlay.classList.remove('ouvert');
+}
+
+overlay.addEventListener('click', fermerCarte);
+
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') fermerCarte();
+});
+/* ============================================================
+   CAROSELLO A MAZZO PER LE ESCURSIONI SU MOBILE
+   ============================================================ */
+(function() {
+  const cartesExc = Array.from(document.querySelectorAll('#grilleExcursions .carte-excursion'));
+  if (cartesExc.length === 0) return;
+
+  let indexActif = 0;
+  const indicateurs = document.getElementById('deckIndicateurs');
+  const btnPrev = document.getElementById('deckPrev');
+  const btnNext = document.getElementById('deckNext');
+
+  /* Creare i punti indicatori */
+  if (indicateurs) {
+    cartesExc.forEach((_, i) => {
+      const dot = document.createElement('span');
+      dot.addEventListener('click', () => allerA(i));
+      indicateurs.appendChild(dot);
+    });
+  }
+
+  /* Applicare le classi deck-active / deck-prev / deck-next / deck-hidden */
+  function mettreAJourDeck() {
+    cartesExc.forEach((carte, i) => {
+      carte.classList.remove('deck-active', 'deck-prev', 'deck-next', 'deck-hidden');
+
+      const diff = (i - indexActif + cartesExc.length) % cartesExc.length;
+
+      if (diff === 0) {
+        carte.classList.add('deck-active');
+      } else if (diff === 1) {
+        carte.classList.add('deck-next');
+      } else if (diff === cartesExc.length - 1) {
+        carte.classList.add('deck-prev');
+      } else {
+        carte.classList.add('deck-hidden');
+      }
+    });
+
+    if (indicateurs && indicateurs.children.length) {
+      Array.from(indicateurs.children).forEach((dot, i) => {
+        dot.classList.toggle('actif', i === indexActif);
+      });
+    }
+  }
+
+  function allerA(i) {
+    indexActif = (i + cartesExc.length) % cartesExc.length;
+    mettreAJourDeck();
+  }
+
+  if (btnPrev) btnPrev.addEventListener('click', () => allerA(indexActif - 1));
+  if (btnNext) btnNext.addEventListener('click', () => allerA(indexActif + 1));
+
+  /* Scorrimento tattile */
+  let touchStartX = 0;
+  const conteneur = document.getElementById('grilleExcursions');
+
+  if (conteneur) {
+    conteneur.addEventListener('touchstart', e => {
+      touchStartX = e.touches[0].clientX;
+    }, {passive: true});
+
+    conteneur.addEventListener('touchend', e => {
+      const touchEndX = e.changedTouches[0].clientX;
+      const diff = touchStartX - touchEndX;
+
+      if (Math.abs(diff) > 40) {
+        if (diff > 0) allerA(indexActif + 1);
+        else allerA(indexActif - 1);
+      }
+    });
+  }
+
+  /* Clic su una scheda laterale per centrarla */
+  cartesExc.forEach((carte, i) => {
+    carte.addEventListener('click', e => {
+      if (i !== indexActif && window.innerWidth <= 768) {
+        e.preventDefault();
+        e.stopPropagation();
+        allerA(i);
+      }
+    });
+  });
+
+  /* Inizializzazione */
+  mettreAJourDeck();
+})();
+
+/* Inizializzazione */
+document.addEventListener('DOMContentLoaded', () => {
+  appliquerLangue('it');
+});
+</script>
+</body>
+</html>   
